@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>外食・半外食カレンダー</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 月送り -->
+  <div class="month-header">
+    <button id="prevMonth">◀</button>
+    <h1 id="title"></h1>
+    <button id="nextMonth">▶</button>
+  </div>
+
+  <!-- 操作ボタン -->
+  <div class="controls">
+    <button id="addRuleBtn">予定を設定</button>
+    <button id="clearRuleBtn">予定を全クリア</button>
+  </div>
+
+  <!-- 曜日 -->
+  <div class="weekdays">
+    <div class="sun">日</div>
+    <div>月</div>
+    <div>火</div>
+    <div>水</div>
+    <div>木</div>
+    <div>金</div>
+    <div class="sat">土</div>
+  </div>
+
+  <!-- カレンダー -->
+  <div class="calendar" id="calendar"></div>
+
+  <!-- 日付モーダル -->
+  <div class="modal" id="dayModal">
+    <div class="modal-content">
+      <h3 id="modalDate"></h3>
+      <div id="modalPlans"></div>
+
+      <hr />
+
+      <label>
+        実績：
+        <select id="actualType">
+          <option value="外食">外食</option>
+          <option value="半外食">半外食</option>
+        </select>
+      </label>
+
+      <br /><br />
+      <button id="markDoneBtn">✓ 実績を保存</button>
+      <button id="removeDoneBtn">✕ 実績を取り消す</button>
+
+      <br /><br />
+      <button onclick="closeDayModal()">閉じる</button>
+    </div>
+  </div>
+
+  <!-- 予定設定モーダル -->
+  <div class="modal" id="ruleModal">
+    <div class="modal-content">
+      <h3>予定を設定</h3>
+
+      <label>
+        区分：
+        <select id="ruleType">
+          <option value="外食">外食</option>
+          <option value="半外食">半外食</option>
+        </select>
+      </label>
+
+      <p>曜日</p>
+      <div class="weekday-checkboxes">
+        <label><input type="checkbox" value="0"> 日</label>
+        <label><input type="checkbox" value="1"> 月</label>
+        <label><input type="checkbox" value="2"> 火</label>
+        <label><input type="checkbox" value="3"> 水</label>
+        <label><input type="checkbox" value="4"> 木</label>
+        <label><input type="checkbox" value="5"> 金</label>
+        <label><input type="checkbox" value="6"> 土</label>
+      </div>
+
+      <br />
+      <button id="saveRuleBtn">保存</button>
+      <button onclick="closeRuleModal()">閉じる</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

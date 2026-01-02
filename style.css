@@ -1,0 +1,106 @@
+body {
+    font-family: system-ui, sans-serif;
+    padding: 16px;
+  }
+  
+  /* 月送り */
+  .month-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  /* 操作ボタン（左寄せ） */
+  .controls {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  /* 曜日 */
+  .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 4px;
+  }
+  
+  .weekdays div {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .weekdays .sun { color: red; }
+  .weekdays .sat { color: blue; }
+  
+  /* カレンダー */
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+  }
+  
+  /* 日セル */
+  .day {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-height: 72px;
+    padding: 6px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .day-number {
+    font-weight: bold;
+  }
+  
+  .day-number.sun,
+  .day-number.holiday {
+    color: red;
+  }
+  
+  .day-number.sat {
+    color: blue;
+  }
+  
+  /* 今日 */
+  .today {
+    background: #fff8d6;
+    border-color: #f1c40f;
+  }
+  
+  /* ドット */
+  .dot {
+    display: block;
+    font-size: 10px;
+    margin-top: 2px;
+  }
+  
+  .plan-外食 { color: red; }
+  .plan-半外食 { color: blue; }
+  .done-外食 { color: darkred; }
+  .done-半外食 { color: darkblue; }
+  
+  /* モーダル */
+  .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 16px;
+    width: 90%;
+    max-width: 320px;
+    border-radius: 8px;
+  }
