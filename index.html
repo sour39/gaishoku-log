@@ -35,6 +35,12 @@
   <!-- カレンダー -->
   <div class="calendar" id="calendar"></div>
 
+  <!-- 週ごとの合計金額 -->
+  <div id="weeklyTotal"></div>
+
+  <!-- 月ごとの合計金額 -->
+  <div id="monthlyTotal"></div>
+
   <!-- 日付モーダル -->
   <div class="modal" id="dayModal">
     <div class="modal-content">
@@ -49,6 +55,20 @@
           <option value="外食">外食</option>
           <option value="半外食">半外食</option>
         </select>
+      </label>
+
+      <br /><br />
+
+      <label>
+        金額（円）：
+        <input type="number" id="actualAmount" min="0" placeholder="例：1500" />
+      </label>
+
+      <br /><br />
+
+      <label>
+        メモ：
+        <textarea id="actualMemo" rows="3" placeholder="例：ランチで定食"></textarea>
       </label>
 
       <br /><br />
